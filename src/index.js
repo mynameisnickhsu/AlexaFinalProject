@@ -15,8 +15,6 @@ var handlers = {
         };
         this.response.speak('Welcome to Inventory, You may store, transfer, remove, or ask for location of items');
     } else {
-        // var input = fs.createReadStream('Inventory.txt');
-        // readLines(input, func);
         this.response.speak('Welcome back to Inventory, Your session is now active');
     }
     this.emit(':responseReady');
@@ -153,30 +151,7 @@ function volumeadder(a1, a2, u1, u2) {
     }
     return a1 + a2;
 }
-function readLines(input, func) {
-  var remaining = '';
 
-  input.on('data', function(data) {
-    remaining += data;
-    var index = remaining.indexOf('\n');
-    while (index > -1) {
-      var line = remaining.substring(0, index);
-      remaining = remaining.substring(index + 1);
-      func(line);
-      index = remaining.indexOf('\n');
-    }
-  });
-
-  input.on('end', function() {
-    if (remaining.length > 0) {
-      func(remaining);
-    }
-  });
-}
-function func(data) {
-  this.response.speak('Line: ' + data);
-  this.response.emit(':responseReady');
-}
 //Handles the Alexa voice inputs and performs based on intents
 exports.handler = function(event, context, callback){
     var alexa = Alexa.handler(event, context);
