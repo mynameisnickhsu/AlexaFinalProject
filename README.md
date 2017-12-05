@@ -32,7 +32,7 @@ Allows users to manage their inventory verbally through the alexa device. Functi
 25. Paste ARN and click next.
 ### Alexa set up
 1. Follow instructions to set up alexa account with the same account that you used for the code.
-2. The skill should now be able to be invoked by :Alexa, ask Inventory [utterance]"
+2. The skill should now be able to be invoked by "Alexa, ask Inventory [utterance]"
 ## Contributers
 Nicholas Hsu
 
